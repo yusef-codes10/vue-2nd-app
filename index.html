@@ -9,7 +9,7 @@
   </head>
   <body>
     <div id="#app">
-      <span>😬</span>
+      <span>{{mySpan}}</span>
       <h1>404</h1>
       <p>
         Oops! Looks like you’ve wandered into the digital wilderness. Don’t
@@ -23,7 +23,10 @@
         const {createApp, ref} = Vue
 
         createApp({
-
+            setup() {
+                const mySpan = ref("🗿")
+                return mySpan
+            }
         }).mount("#app")
      </script>
   </body>
