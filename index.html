@@ -10,12 +10,11 @@
   <body>
     <div id="app">
       <span>{{mySpan}}</span>
-      <h1>404</h1>
+      <h1>{{header}}</h1>
       <p>
-        Oops! Looks like you’ve wandered into the digital wilderness. Don’t
-        worry, even the best explorers get lost sometimes.
+            {{paragraph}}
       </p>
-      <a href="https://www.scrimba.com" target="_blank">Go back to safety →</a>
+      <a href="https://www.scrimba.com" target="_blank">{{btn}}</a>
     </div>
 
     <!-- step# -->
@@ -25,7 +24,11 @@
         createApp({
             setup() {
                 const mySpan = ref("🗿")
-                return {mySpan}
+                const header = ref("200")
+
+                const paragraph = ref("Vue app is working successfully")
+                const btn = ref("Don't click! this is a trap")
+                return {mySpan, header, paragraph, btn}
             }
         }).mount("#app")
      </script>
